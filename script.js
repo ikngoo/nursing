@@ -1,4 +1,4 @@
-var nursing = {
+var nursingData = {
 "type": "FeatureCollection",
 "name": "10906全國開業護理機構",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
