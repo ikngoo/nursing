@@ -67,7 +67,7 @@ function onEachFeature(feature, layer) {
   var alltypes = L.layerGroup();
   var markers = L.markerClusterGroup();
 
-	var geojson = L.geoJson(statesData,{onEachFeature: onEachFeature}).addTo(alltypes);
+	var geojson = L.geoJson(nursingData,{onEachFeature: onEachFeature}).addTo(alltypes);
 
 markers.addLayer(alltypes).addTo(map);
 
