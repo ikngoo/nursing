@@ -57,7 +57,7 @@
 function onEachFeature(feature, layer) {
     // does this feature have a property named popupContent?
     if (feature.properties && feature.properties.機構名稱) {
-        layer.bindPopup("<b><a href=\""+feature.properties.院所明細查詢+" \"target=\"_blank\"></b>" + 
+        layer.bindPopup("<b><a href=\"https://www.nhi.gov.tw/QueryN/Query3_Detail.aspx?Page=3&HospID="+feature.properties.機構代碼+" \"target=\"_blank\"></b>" + 
 		feature.properties.機構名稱 + "</a>" + "<br>"
          + feature.properties.機構類型  + "<br>"
          + feature.properties.機構代碼  + "<br>"
