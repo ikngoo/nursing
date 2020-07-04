@@ -34,10 +34,19 @@
 			  color: #fff;
 			  background: #f6f;
 			}
-			.alltypes.search-tip b,
-		    .alltypes.leaflet-marker-icon {
+			.一般護理之家.search-tip b,
+		    .一般護理之家.leaflet-marker-icon {
+			  background: #f66;
+		}
+			.居家護理所.search-tip b,
+		    .居家護理所.leaflet-marker-icon {
 			  background: #f6f;
 		}
+			.產後護理之家.search-tip b,
+		    .產後護理之家.leaflet-marker-icon {
+			  background: #66f;
+		}
+
 			.search-tip {
 			white-space: nowrap;
 		}
@@ -103,7 +112,7 @@ markers.addLayer(alltypes).addTo(map);
 	};
 
 //... adding data in alltypes ...
-	var controlSearch = new L.Control.Search({layer: alltypes,propertyName: '機構名稱',buildTip: function(text, val) {
+	var controlSearch = new L.Control.Search({layer: markers,propertyName: '機構名稱',buildTip: function(text, val) {
 			var type = val.layer.feature.properties.機構類型;
 			return '<a href="#" class="'+type+'">'+text+'<b>'+type+'</b></a>';
 		},zoom: 17, initial: false, position:'topleft',textPlaceholder: '搜尋名稱'
