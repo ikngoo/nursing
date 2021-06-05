@@ -76,8 +76,7 @@
 
 
 	var map = L.map('map',{
-    crs: L.CRS.EPSG4326,
-	layers: [markers]
+    crs: L.CRS.EPSG4326
 }).setView([23, 121], 6);
  L.tileLayer.wms('http://wms.nlsc.gov.tw/wms', {
     layers: 'EMAP16',
@@ -127,7 +126,7 @@
   });
 
 markers.addTo(map);
-alltypes.addTo(map);
+
 
 	var overlays = {
 		"群聚": markers,
