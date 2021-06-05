@@ -105,7 +105,7 @@
     for (var i in data) {
       var row = data[i];
 
-      var marker = L.marker([row.WGS84緯度, row.WGS84經度], {
+      var marker = new L.marker([row.WGS84緯度, row.WGS84經度], {
         opacity: 1
       }).bindPopup("<b><a href=\"https://www.nhi.gov.tw/QueryN/Query3_Detail.aspx?Page=3&HospID="+row.機構代碼+" \"target=\"_blank\"></b>" + 
 		row.機構名稱 + "</a>" + "<br>"
