@@ -118,10 +118,11 @@
 		 +"資料更新："+ row.資料更新時間);
 	alltypes.addLayer(marker);
     }
-
+	markers.addLayer(alltypes).addTo(map);
+    
   });
 
-markers.addLayer(alltypes).addTo(map);
+
 
 
 	var overlays = {
