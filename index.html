@@ -99,7 +99,7 @@
 
     // Use PapaParse to convert string to array of objects
     var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
-
+    var array = [];
     // For each row in data, create a marker and add it to the map
     // For each row, columns `Latitude`, `Longitude`, and `Title` are required
     for (var i in data) {
@@ -118,9 +118,9 @@
          +"機構電話："+ "<a href=\"tel:+886"+row.電話+"\">" + row.電話 + "</a><br>"
 		 +"資料更新："+ row.資料更新時間);
       
-
-    }.addTo(alltypes);
-
+      array.push(marker);
+    }
+    array.addTo(alltypes);
   });
   
 markers.addLayer(alltypes).addTo(map);
