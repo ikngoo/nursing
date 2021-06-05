@@ -105,7 +105,9 @@
       var row = data[i];
 
       var marker = L.marker([row.WGS84緯度, row.WGS84經度], {
-        opacity: 1
+        opacity: 1,
+		title: row.機構名稱,
+		alt: row.機構類型
       }).bindPopup("<b><a href=\"https://www.nhi.gov.tw/QueryN/Query3_Detail.aspx?Page=3&HospID="+row.機構代碼+" \"target=\"_blank\"></b>" + 
 		row.機構名稱 + "</a>" + "<br>"
          +"機構類型："+ row.機構類型  + "<br>"
@@ -132,8 +134,8 @@ alltypes.addTo(map);
 	};
 
 //... adding data in alltypes ...
-	var controlSearch = new L.Control.Search({layer: alltypes,propertyName: '機構名稱',buildTip: function(text, val) {
-			var type = val.layer.feature.properties.機構類型;
+	var controlSearch = new L.Control.Search({layer: alltypes,propertyName: 'title',buildTip: function(text, val) {
+			var type = val.layer.options.alt;
 			return '<a href="#" class="'+type+'">'+text+'<b>'+type+'</b></a>';
 		},zoom: 17, initial: false, position:'topleft',textPlaceholder: '搜尋名稱'
    });
