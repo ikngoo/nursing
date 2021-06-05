@@ -119,14 +119,14 @@
 		 +"資料更新："+ row.資料更新時間);
 		array.push(marker);
     }
-	L.featureGroup(array).addTo(alltypes);
 
   });
+markers.addLayers(array).addTo(map);
 
 markers.addLayer(alltypes).addTo(map);
 
 	var overlays = {
-		"全部": alltypes,
+		"全部": array,
 		"群聚": markers
 	};
 
