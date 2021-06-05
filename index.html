@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -87,11 +86,13 @@ function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.機構名稱) {
         layer.bindPopup("<b><a href=\"https://www.nhi.gov.tw/QueryN/Query3_Detail.aspx?Page=3&HospID="+feature.properties.機構代碼+" \"target=\"_blank\"></b>" + 
 		feature.properties.機構名稱 + "</a>" + "<br>"
-         + feature.properties.機構類型  + "<br>"
-         + feature.properties.機構代碼  + "<br>"
-         +"<a href=\"https://www.google.com/maps/dir//"+feature.properties.WGS84緯度+" ,"+feature.properties.WGS84經度+ 
+         +"機構類型："+ feature.properties.機構類型  + "<br>"
+         +"機構代碼："+ feature.properties.機構代碼  + "<br>"
+         +"評鑑結果："+ feature.properties.評鑑結果  + "<br>"
+         +"合格效期："+ feature.properties.合格效期  + "<br>"
+         +"機構地址："+"<a href=\"https://www.google.com/maps/dir//"+feature.properties.WGS84緯度+" ,"+feature.properties.WGS84經度+ 
 		 "/@"+feature.properties.WGS84緯度+","+feature.properties.WGS84經度+  ",10z\" target=\"_blank\">"+ feature.properties.地址  + "</a><br>"
-         + "<a href=\"tel:+886"+feature.properties.電話+"\">" + feature.properties.電話 + "</a>" );
+         +"機構電話："+ "<a href=\"tel:+886"+feature.properties.電話+"\">" + feature.properties.電話 + "</a>" );
     }
 }
 
