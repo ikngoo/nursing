@@ -92,14 +92,14 @@
 
   var alltypes = L.layerGroup();
   var markers = L.markerClusterGroup();
-
+  var array = [];
 
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
 
     // Use PapaParse to convert string to array of objects
     var data = Papa.parse(csvString, {header: true, dynamicTyping: true}).data;
-    var array = [];
+
     // For each row in data, create a marker and add it to the map
     // For each row, columns `Latitude`, `Longitude`, and `Title` are required
     for (var i in data) {
@@ -120,9 +120,9 @@
       
       array.push(marker);
     }
-    array.addTo(alltypes);
+
   });
-  
+array.addTo(alltypes);
 markers.addLayer(alltypes).addTo(map);
 
 	var overlays = {
