@@ -117,12 +117,12 @@
 		 "/@"+row.WGS84緯度+","+row.WGS84經度+  ",10z\" target=\"_blank\">"+ row.地址  + "</a><br>"
          +"機構電話："+ "<a href=\"tel:+886"+row.電話+"\">" + row.電話 + "</a><br>"
 		 +"資料更新："+ row.資料更新時間);
-      
-      array.push(marker);
+		array.push(marker);
     }
+	array.addTo(alltypes);
 
   });
-array.addTo(alltypes);
+
 markers.addLayer(alltypes).addTo(map);
 
 	var overlays = {
