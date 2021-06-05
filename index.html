@@ -134,7 +134,7 @@ alltypes.addTo(map);
 	};
 
 //... adding data in alltypes ...
-	var controlSearch = new L.Control.Search({layer: alltypes,propertyName: 'title',buildTip: function(text, val) {
+	var controlSearch = new L.Control.Search({layer: markers,propertyName: 'title',buildTip: function(text, val) {
 			var type = val.layer.options.alt;
 			return '<a href="#" class="'+type+'">'+text+'<b>'+type+'</b></a>';
 		},zoom: 17, initial: false, position:'topleft',textPlaceholder: '搜尋名稱'
