@@ -119,7 +119,7 @@
 		 +"資料更新："+ row.資料更新時間);
 		array.push(marker);
     }
-	array.addTo(alltypes);
+	L.featureGroup(array).addTo(alltypes);
 
   });
 
