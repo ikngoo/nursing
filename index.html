@@ -76,7 +76,8 @@
 
 
 	var map = L.map('map',{
-    crs: L.CRS.EPSG4326
+    crs: L.CRS.EPSG4326,
+	layers: [markers]
 }).setView([23, 121], 6);
  L.tileLayer.wms('http://wms.nlsc.gov.tw/wms', {
     layers: 'EMAP16',
