@@ -117,13 +117,14 @@
          +"機構電話："+ "<a href=\"tel:+886"+row.機構電話+"\">" + row.機構電話 + "</a><br>"
 		 +"資料更新："+ row.資料更新時間);
 	alltypes.addLayer(marker);
+	markers.addLayers(marker);
     }
-	markers.addLayers(alltypes).addTo(map);
+	
     
   });
 
-
-
+alltypes.addTo(map);
+markers.addTo(map);
 
 	var overlays = {
 		"全部": alltypes,
