@@ -74,7 +74,7 @@
     layers: 'EMAP16',
 	attribution: 'TGOS &copy; <a href="http://wms.nlsc.gov.tw/wms">內政部</a>, ｜' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> ｜' + 
-			'<a href="https://nhplatform.mohw.gov.tw/dl-1291-5b597ef8fa98446ea0d4b543aec6bfea.html">資料下載</a>',
+			'<a href="https://data.gov.tw/dataset/115950">資料下載</a>',
     format: 'image/png',
     transparent: true,
     continuousWorld : true,
@@ -92,7 +92,8 @@ function onEachFeature(feature, layer) {
          +"合格效期："+ feature.properties.合格效期  + "<br>"
          +"機構地址："+"<a href=\"https://www.google.com/maps/dir//"+feature.properties.WGS84緯度+" ,"+feature.properties.WGS84經度+ 
 		 "/@"+feature.properties.WGS84緯度+","+feature.properties.WGS84經度+  ",10z\" target=\"_blank\">"+ feature.properties.地址  + "</a><br>"
-         +"機構電話："+ "<a href=\"tel:+886"+feature.properties.電話+"\">" + feature.properties.電話 + "</a>" );
+         +"機構電話："+ "<a href=\"tel:+886"+feature.properties.電話+"\">" + feature.properties.電話 + "</a><br>"
+		 +"資料更新："+ feature.properties.資料更新時間);
     }
 }
 
