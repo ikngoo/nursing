@@ -4,7 +4,7 @@ name: scrapeOD115950
 # Controls when the action will run.
 on:
   schedule:
-    - cron:  '0 13 * * *'
+    - cron:  '0 * * * *'
 
 
 jobs: 
