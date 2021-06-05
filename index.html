@@ -90,7 +90,7 @@
 }).addTo(map);
 
 
-  var alltypes = L.layerGroup().addTo(map);
+  var alltypes = L.layerGroup();
   var markers = L.markerClusterGroup();
 
   // Read markers data from data.csv
@@ -121,7 +121,7 @@
 
   });
 
-markers.addLayers(alltypes).addTo(map);
+markers.addLayer(alltypes).addTo(map);
 
 
 	var overlays = {
