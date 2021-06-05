@@ -90,8 +90,8 @@
 }).addTo(map);
 
 
-  var alltypes = L.layerGroup();
   var markers = L.markerClusterGroup();
+  var alltypes = L.layerGroup();
 
   // Read markers data from data.csv
   $.get('./data.csv', function(csvString) {
@@ -116,8 +116,8 @@
 		 "/@"+row.WGS84緯度+","+row.WGS84經度+  ",10z\" target=\"_blank\">"+ row.地址  + "</a><br>"
          +"機構電話："+ "<a href=\"tel:+886"+row.機構電話+"\">" + row.機構電話 + "</a><br>"
 		 +"資料更新："+ row.資料更新時間);
-	alltypes.addLayer(marker);
 	markers.addLayers(marker);
+	alltypes.addLayer(marker);
     }
 	
     
