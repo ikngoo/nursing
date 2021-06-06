@@ -4,7 +4,7 @@ name: scrapeOD115950
 # Controls when the action will run.
 on:
   schedule:
-    - cron:  '0 * * * *'
+    - cron:  '7 * * * *'
 
 
 jobs: 
@@ -24,7 +24,7 @@ jobs:
         R -e 'install.packages("jsonlite")'
     # Run R script
     - name: Scrape
-      run: Rscript scrapeOD115950.R
+      run: Rscript ScrapeOD115950.R
       
  # Add new files in data folder, commit along with other modified files, push
     - name: Commit files
