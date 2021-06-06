@@ -4,7 +4,7 @@ name: scrapeOD115950
 # Controls when the action will run.
 on:
   schedule:
-    - cron:  '7 * * * *'
+    - cron:  '5 * * * *'
 
 
 jobs: 
@@ -22,6 +22,8 @@ jobs:
       run: |
         R -e 'install.packages("tidyverse")'
         R -e 'install.packages("jsonlite")'
+        R -e 'install.packages("janitor")'
+        R -e 'install.packages("rvest")'
     # Run R script
     - name: Scrape
       run: Rscript ScrapeOD115950.R
