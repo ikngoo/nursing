@@ -9,7 +9,7 @@ url <- 'https://quality.data.gov.tw/dq_download_csv.php?nid=115950&md5_url=1f49e
 
 # read csv 
 
-df <- read.table(file = csvurl, header=TRUE, sep=",", fileEncoding = "UTF-8-BOM", fill=TRUE)
+df <- read.table(file = url, header=TRUE, sep=",", fileEncoding = "UTF-8-BOM", fill=TRUE)
 
 
 
