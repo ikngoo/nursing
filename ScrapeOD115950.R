@@ -13,5 +13,5 @@ df <- read.table(file = url, header=TRUE, sep=",", fileEncoding = "UTF-8-BOM", f
 
 
 
-write_csv(df,'data.csv')    
+write_csv(df[!(!is.na(df$`WGS84經度`) & df$`WGS84經度` ==""), ],'data.csv')    
 
