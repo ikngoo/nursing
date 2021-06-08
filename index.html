@@ -44,6 +44,10 @@
 		    .居家護理所.leaflet-marker-icon {
 			  background: #f6f;
 		}
+			.居家護理機構.search-tip b,
+		    .居家護理機構.leaflet-marker-icon {
+			  background: #f6f;
+		}
 			.產後護理之家.search-tip b,
 		    .產後護理之家.leaflet-marker-icon {
 			  background: #66f;
@@ -108,10 +112,10 @@
       var marker = L.marker([row.WGS84緯度, row.WGS84經度], {
         opacity: 1,
 		title: row.機構名稱,
-		alt: row.機構類型
+		alt: row.機構類別
       }).bindPopup("<b><a href=\"https://www.nhi.gov.tw/QueryN/Query3_Detail.aspx?Page=3&HospID="+row.機構代碼+" \"target=\"_blank\"></b>" + 
 		row.機構名稱 + "</a>" + "<br>"
-         +"機構類型："+ row.機構類型  + "<br>"
+         +"機構類別："+ row.機構類別  + "<br>"
          +"機構代碼："+ row.機構代碼  + "<br>"
          +"評鑑結果："+ row.評鑑結果  + "<br>"
          +"合格效期："+ row.合格效期  + "<br>"
