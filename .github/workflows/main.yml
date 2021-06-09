@@ -4,7 +4,7 @@ name: scrapeOD115950
 # Controls when the action will run.
 on:
   schedule:
-    - cron:  '0 0 * * *'
+    - cron:  '0 1 * * *'
 
 
 jobs: 
@@ -33,6 +33,7 @@ jobs:
       run: |
         git config --local user.name actions-user
         git config --local user.email "actions@github.com"
+        git rm --cached data/data.csv
         git add data/data.csv
         git commit -am "Latest update at $(date)"
         git push origin master
